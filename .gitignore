@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+ENV/
+
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+
+# Virtual environment
+venv/
+.venv/
+
+
+# Editor/IDE files
+.vscode/
+.idea/
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# dotenv
+.env
+
+
+# pytest
+.pytest_cache/
+
+
+# Node (if you add any front-end samples)
+node_modules/
+
+
+# Logs
+*.log
+
+
+# Misc
+coverage/
