@@ -33,7 +33,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('', home) # root url
+    path('', home), # root url
     path("admin/", admin.site.urls),
     path("api/", include("polls.urls")),
     re_path(r"^api/docs(?P<format>\.json|\.yaml)$", schema_view.without_ui(cache_timeout=0), name="schema-json"),
