@@ -17,10 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.conf import settings
-from django.shortcuts import redirect
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from .views import home
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -32,11 +32,8 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 
-def redirect_to_docs(request):
-    return redirect('/api/docs/')
-
 urlpatterns = [
-    path('', redirect_to_docs)
+    path('', home) # root url
     path("admin/", admin.site.urls),
     path("api/", include("polls.urls")),
     re_path(r"^api/docs(?P<format>\.json|\.yaml)$", schema_view.without_ui(cache_timeout=0), name="schema-json"),
