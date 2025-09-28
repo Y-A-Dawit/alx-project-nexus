@@ -1,1 +1,1 @@
-gunicorn polls_api.wsgi
+gunicorn polls_api.wsgi:application
